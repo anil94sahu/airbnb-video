@@ -1,6 +1,6 @@
 'use client'
 
-import {PuffLoader} from 'react-spinner';
+import {PuffLoader} from 'react-spinners';
 
 const Loader = () => {
     return (
@@ -13,7 +13,7 @@ const Loader = () => {
         ">
         <PuffLoader
             size={100}
-            color={red}
+            color="red"
         />
         </div>
     )
