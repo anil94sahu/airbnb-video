@@ -95,7 +95,11 @@ const Categories = () => {
     const params = useSearchParams();
     const category = params?.get('category');
     const pathname = usePathname();
-    const isMainPage = pathname === '/'
+    const isMainPage = pathname === '/';
+
+    if (!isMainPage) {
+        return null;
+      }
   return (
     <Container>
         <div className="

@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect, useReducer } from 'react'
 import { IconType } from 'react-icons';
 import qs from 'query-string'
 
@@ -38,12 +38,11 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
   return (
     <div onClick={handleClick}
      className="
-        flex flex-col items-center justify-center gap-2 p-3 border-b-2
-        hover:text-neutral-800 transition cursor-pointer *:
+        flex flex-col items-center justify-center gap-2 p-3 border-b-2 
+        hover:text-neutral-800 
+         transition cursor-pointer 
         ${selected? 'border-b-neutral-800': 'border-transparent'}
-        ${selected? 'text-neutral-800':'text-neutral-500'}
-     "
-    >
+        ${selected? 'text-neutral-800':'text-neutral-500'}">
         <Icon size={26}/>
         <div className="font-medium text-sm">
             {label}
@@ -53,3 +52,17 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 }
 
 export default CategoryBox
+
+
+
+const [counter, setCounter] = useState(1);
+
+useEffect(() => {let value = 'abcd'}, []);
+
+const reducer = useReducer(state => state.amount);
+
+
+1 >> counter1 +-, counter2 +-2
+2>> increment, decrement
+
+
